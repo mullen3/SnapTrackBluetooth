@@ -41,8 +41,11 @@
             // TODO: add more cases
         case CBPeripheralManagerStatePoweredOn:
             [self setupService];
-            
+
+            [self advertise];
             break;
+        case CBPeripheralManagerStatePoweredOff:
+            NSLog(@"Powered off");
             
         default:
             break;
@@ -51,6 +54,7 @@
 
 - (void)setupService
 {
+    NSLog(@"Setting up service");
     cbuuidService = [CBUUID UUIDWithString:SNAPTRACK_SERVICE_UUID_STRING];
     
     cbuuidName = [CBUUID UUIDWithString:CHARACTERISTIC_NAME_UUID_STRING];
@@ -74,8 +78,9 @@
 - (void)advertise
 {
     NSArray *services = [NSArray arrayWithObject:cbuuidService];
-    
+    NSLog(@"Starting to advertise");
     [manager startAdvertising:[NSDictionary dictionaryWithObject:services forKey:CBAdvertisementDataServiceUUIDsKey]];
 }
+
 
 @end

@@ -11,4 +11,5 @@
 
 @interface SnapTrackService : NSObject <CBPeripheralManagerDelegate>
 
+
 @end

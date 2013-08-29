@@ -95,7 +95,6 @@
 		B185729617CFBB2700EFB1A3 = {
 			isa = PBXGroup;
 			children = (
-				B18572E317CFBBC600EFB1A3 /* CoreBluetooth.framework */,
 				B18572A817CFBB2700EFB1A3 /* SnapTrackServer */,
 				B18572CF17CFBB2700EFB1A3 /* SnapTrackServerTests */,
 				B18572A117CFBB2700EFB1A3 /* Frameworks */,
@@ -115,6 +114,7 @@
 		B18572A117CFBB2700EFB1A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B18572E317CFBBC600EFB1A3 /* CoreBluetooth.framework */,
 				B18572A217CFBB2700EFB1A3 /* UIKit.framework */,
 				B18572A417CFBB2700EFB1A3 /* Foundation.framework */,
 				B18572A617CFBB2700EFB1A3 /* CoreGraphics.framework */,
@@ -132,9 +132,9 @@
 				B18572BD17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard */,
 				B18572C017CFBB2700EFB1A3 /* ViewController.h */,
 				B18572C117CFBB2700EFB1A3 /* ViewController.m */,
-				B18572A917CFBB2700EFB1A3 /* Supporting Files */,
 				B18572E017CFBB5000EFB1A3 /* SnapTrackService.h */,
 				B18572E117CFBB5000EFB1A3 /* SnapTrackService.m */,
+				B18572A917CFBB2700EFB1A3 /* Supporting Files */,
 			);
 			path = SnapTrackServer;
 			sourceTree = "<group>";

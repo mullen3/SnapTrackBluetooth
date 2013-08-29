@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "SnapTrackService.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) SnapTrackService *snapTrackService;
+
 
 @end
 
@@ -18,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _snapTrackService = [[SnapTrackService alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
