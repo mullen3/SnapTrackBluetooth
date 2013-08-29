@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B18572A317CFBB2700EFB1A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A217CFBB2700EFB1A3 /* UIKit.framework */; };
+		B18572A517CFBB2700EFB1A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A417CFBB2700EFB1A3 /* Foundation.framework */; };
+		B18572A717CFBB2700EFB1A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A617CFBB2700EFB1A3 /* CoreGraphics.framework */; };
+		B18572AD17CFBB2700EFB1A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B18572AB17CFBB2700EFB1A3 /* InfoPlist.strings */; };
+		B18572AF17CFBB2700EFB1A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572AE17CFBB2700EFB1A3 /* main.m */; };
+		B18572B317CFBB2700EFB1A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572B217CFBB2700EFB1A3 /* AppDelegate.m */; };
+		B18572B517CFBB2700EFB1A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B18572B417CFBB2700EFB1A3 /* Default.png */; };
+		B18572B717CFBB2700EFB1A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B18572B617CFBB2700EFB1A3 /* Default@2x.png */; };
+		B18572B917CFBB2700EFB1A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B18572B817CFBB2700EFB1A3 /* Default-568h@2x.png */; };
+		B18572BC17CFBB2700EFB1A3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18572BA17CFBB2700EFB1A3 /* MainStoryboard_iPhone.storyboard */; };
+		B18572BF17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18572BD17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard */; };
+		B18572C217CFBB2700EFB1A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572C117CFBB2700EFB1A3 /* ViewController.m */; };
+		B18572CA17CFBB2700EFB1A3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572C917CFBB2700EFB1A3 /* SenTestingKit.framework */; };
+		B18572CB17CFBB2700EFB1A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A217CFBB2700EFB1A3 /* UIKit.framework */; };
+		B18572CC17CFBB2700EFB1A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A417CFBB2700EFB1A3 /* Foundation.framework */; };
+		B18572D417CFBB2700EFB1A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B18572D217CFBB2700EFB1A3 /* InfoPlist.strings */; };
+		B18572D717CFBB2700EFB1A3 /* SnapTrackServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572D617CFBB2700EFB1A3 /* SnapTrackServerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B18572CD17CFBB2700EFB1A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B185729717CFBB2700EFB1A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B185729E17CFBB2700EFB1A3;
+			remoteInfo = SnapTrackServer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B185729F17CFBB2700EFB1A3 /* SnapTrackServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapTrackServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B18572A217CFBB2700EFB1A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B18572A417CFBB2700EFB1A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B18572A617CFBB2700EFB1A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B18572AA17CFBB2700EFB1A3 /* SnapTrackServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapTrackServer-Info.plist"; sourceTree = "<group>"; };
+		B18572AC17CFBB2700EFB1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B18572AE17CFBB2700EFB1A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B18572B017CFBB2700EFB1A3 /* SnapTrackServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapTrackServer-Prefix.pch"; sourceTree = "<group>"; };
+		B18572B117CFBB2700EFB1A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B18572B217CFBB2700EFB1A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B18572B417CFBB2700EFB1A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B18572B617CFBB2700EFB1A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B18572B817CFBB2700EFB1A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B18572BB17CFBB2700EFB1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		B18572BE17CFBB2700EFB1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B18572C017CFBB2700EFB1A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B18572C117CFBB2700EFB1A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B18572C817CFBB2700EFB1A3 /* SnapTrackServerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapTrackServerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B18572C917CFBB2700EFB1A3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B18572D117CFBB2700EFB1A3 /* SnapTrackServerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapTrackServerTests-Info.plist"; sourceTree = "<group>"; };
+		B18572D317CFBB2700EFB1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B18572D517CFBB2700EFB1A3 /* SnapTrackServerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapTrackServerTests.h; sourceTree = "<group>"; };
+		B18572D617CFBB2700EFB1A3 /* SnapTrackServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTrackServerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B185729C17CFBB2700EFB1A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572A317CFBB2700EFB1A3 /* UIKit.framework in Frameworks */,
+				B18572A517CFBB2700EFB1A3 /* Foundation.framework in Frameworks */,
+				B18572A717CFBB2700EFB1A3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18572C417CFBB2700EFB1A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572CA17CFBB2700EFB1A3 /* SenTestingKit.framework in Frameworks */,
+				B18572CB17CFBB2700EFB1A3 /* UIKit.framework in Frameworks */,
+				B18572CC17CFBB2700EFB1A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B185729617CFBB2700EFB1A3 = {
+			isa = PBXGroup;
+			children = (
+				B18572A817CFBB2700EFB1A3 /* SnapTrackServer */,
+				B18572CF17CFBB2700EFB1A3 /* SnapTrackServerTests */,
+				B18572A117CFBB2700EFB1A3 /* Frameworks */,
+				B18572A017CFBB2700EFB1A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B18572A017CFBB2700EFB1A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B185729F17CFBB2700EFB1A3 /* SnapTrackServer.app */,
+				B18572C817CFBB2700EFB1A3 /* SnapTrackServerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B18572A117CFBB2700EFB1A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B18572A217CFBB2700EFB1A3 /* UIKit.framework */,
+				B18572A417CFBB2700EFB1A3 /* Foundation.framework */,
+				B18572A617CFBB2700EFB1A3 /* CoreGraphics.framework */,
+				B18572C917CFBB2700EFB1A3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B18572A817CFBB2700EFB1A3 /* SnapTrackServer */ = {
+			isa = PBXGroup;
+			children = (
+				B18572B117CFBB2700EFB1A3 /* AppDelegate.h */,
+				B18572B217CFBB2700EFB1A3 /* AppDelegate.m */,
+				B18572BA17CFBB2700EFB1A3 /* MainStoryboard_iPhone.storyboard */,
+				B18572BD17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard */,
+				B18572C017CFBB2700EFB1A3 /* ViewController.h */,
+				B18572C117CFBB2700EFB1A3 /* ViewController.m */,
+				B18572A917CFBB2700EFB1A3 /* Supporting Files */,
+			);
+			path = SnapTrackServer;
+			sourceTree = "<group>";
+		};
+		B18572A917CFBB2700EFB1A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B18572AA17CFBB2700EFB1A3 /* SnapTrackServer-Info.plist */,
+				B18572AB17CFBB2700EFB1A3 /* InfoPlist.strings */,
+				B18572AE17CFBB2700EFB1A3 /* main.m */,
+				B18572B017CFBB2700EFB1A3 /* SnapTrackServer-Prefix.pch */,
+				B18572B417CFBB2700EFB1A3 /* Default.png */,
+				B18572B617CFBB2700EFB1A3 /* Default@2x.png */,
+				B18572B817CFBB2700EFB1A3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B18572CF17CFBB2700EFB1A3 /* SnapTrackServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B18572D517CFBB2700EFB1A3 /* SnapTrackServerTests.h */,
+				B18572D617CFBB2700EFB1A3 /* SnapTrackServerTests.m */,
+				B18572D017CFBB2700EFB1A3 /* Supporting Files */,
+			);
+			path = SnapTrackServerTests;
+			sourceTree = "<group>";
+		};
+		B18572D017CFBB2700EFB1A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B18572D117CFBB2700EFB1A3 /* SnapTrackServerTests-Info.plist */,
+				B18572D217CFBB2700EFB1A3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B185729E17CFBB2700EFB1A3 /* SnapTrackServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B18572DA17CFBB2700EFB1A3 /* Build configuration list for PBXNativeTarget "SnapTrackServer" */;
+			buildPhases = (
+				B185729B17CFBB2700EFB1A3 /* Sources */,
+				B185729C17CFBB2700EFB1A3 /* Frameworks */,
+				B185729D17CFBB2700EFB1A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapTrackServer;
+			productName = SnapTrackServer;
+			productReference = B185729F17CFBB2700EFB1A3 /* SnapTrackServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B18572C717CFBB2700EFB1A3 /* SnapTrackServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B18572DD17CFBB2700EFB1A3 /* Build configuration list for PBXNativeTarget "SnapTrackServerTests" */;
+			buildPhases = (
+				B18572C317CFBB2700EFB1A3 /* Sources */,
+				B18572C417CFBB2700EFB1A3 /* Frameworks */,
+				B18572C517CFBB2700EFB1A3 /* Resources */,
+				B18572C617CFBB2700EFB1A3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B18572CE17CFBB2700EFB1A3 /* PBXTargetDependency */,
+			);
+			name = SnapTrackServerTests;
+			productName = SnapTrackServerTests;
+			productReference = B18572C817CFBB2700EFB1A3 /* SnapTrackServerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B185729717CFBB2700EFB1A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Mullen, Connor";
+			};
+			buildConfigurationList = B185729A17CFBB2700EFB1A3 /* Build configuration list for PBXProject "SnapTrackServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B185729617CFBB2700EFB1A3;
+			productRefGroup = B18572A017CFBB2700EFB1A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B185729E17CFBB2700EFB1A3 /* SnapTrackServer */,
+				B18572C717CFBB2700EFB1A3 /* SnapTrackServerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B185729D17CFBB2700EFB1A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572AD17CFBB2700EFB1A3 /* InfoPlist.strings in Resources */,
+				B18572B517CFBB2700EFB1A3 /* Default.png in Resources */,
+				B18572B717CFBB2700EFB1A3 /* Default@2x.png in Resources */,
+				B18572B917CFBB2700EFB1A3 /* Default-568h@2x.png in Resources */,
+				B18572BC17CFBB2700EFB1A3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				B18572BF17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18572C517CFBB2700EFB1A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572D417CFBB2700EFB1A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B18572C617CFBB2700EFB1A3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B185729B17CFBB2700EFB1A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572AF17CFBB2700EFB1A3 /* main.m in Sources */,
+				B18572B317CFBB2700EFB1A3 /* AppDelegate.m in Sources */,
+				B18572C217CFBB2700EFB1A3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18572C317CFBB2700EFB1A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18572D717CFBB2700EFB1A3 /* SnapTrackServerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B18572CE17CFBB2700EFB1A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B185729E17CFBB2700EFB1A3 /* SnapTrackServer */;
+			targetProxy = B18572CD17CFBB2700EFB1A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B18572AB17CFBB2700EFB1A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18572AC17CFBB2700EFB1A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B18572BA17CFBB2700EFB1A3 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18572BB17CFBB2700EFB1A3 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B18572BD17CFBB2700EFB1A3 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18572BE17CFBB2700EFB1A3 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B18572D217CFBB2700EFB1A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18572D317CFBB2700EFB1A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B18572D817CFBB2700EFB1A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B18572D917CFBB2700EFB1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B18572DB17CFBB2700EFB1A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnapTrackServer/SnapTrackServer-Prefix.pch";
+				INFOPLIST_FILE = "SnapTrackServer/SnapTrackServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B18572DC17CFBB2700EFB1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnapTrackServer/SnapTrackServer-Prefix.pch";
+				INFOPLIST_FILE = "SnapTrackServer/SnapTrackServer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B18572DE17CFBB2700EFB1A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SnapTrackServer.app/SnapTrackServer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnapTrackServer/SnapTrackServer-Prefix.pch";
+				INFOPLIST_FILE = "SnapTrackServerTests/SnapTrackServerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B18572DF17CFBB2700EFB1A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SnapTrackServer.app/SnapTrackServer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SnapTrackServer/SnapTrackServer-Prefix.pch";
+				INFOPLIST_FILE = "SnapTrackServerTests/SnapTrackServerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B185729A17CFBB2700EFB1A3 /* Build configuration list for PBXProject "SnapTrackServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18572D817CFBB2700EFB1A3 /* Debug */,
+				B18572D917CFBB2700EFB1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B18572DA17CFBB2700EFB1A3 /* Build configuration list for PBXNativeTarget "SnapTrackServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18572DB17CFBB2700EFB1A3 /* Debug */,
+				B18572DC17CFBB2700EFB1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B18572DD17CFBB2700EFB1A3 /* Build configuration list for PBXNativeTarget "SnapTrackServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18572DE17CFBB2700EFB1A3 /* Debug */,
+				B18572DF17CFBB2700EFB1A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B185729717CFBB2700EFB1A3 /* Project object */;
+}
