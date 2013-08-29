@@ -24,6 +24,8 @@
 		B18572CC17CFBB2700EFB1A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572A417CFBB2700EFB1A3 /* Foundation.framework */; };
 		B18572D417CFBB2700EFB1A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B18572D217CFBB2700EFB1A3 /* InfoPlist.strings */; };
 		B18572D717CFBB2700EFB1A3 /* SnapTrackServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572D617CFBB2700EFB1A3 /* SnapTrackServerTests.m */; };
+		B18572E217CFBB5000EFB1A3 /* SnapTrackService.m in Sources */ = {isa = PBXBuildFile; fileRef = B18572E117CFBB5000EFB1A3 /* SnapTrackService.m */; };
+		B18572E417CFBBC600EFB1A3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18572E317CFBBC600EFB1A3 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		B18572D317CFBB2700EFB1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B18572D517CFBB2700EFB1A3 /* SnapTrackServerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapTrackServerTests.h; sourceTree = "<group>"; };
 		B18572D617CFBB2700EFB1A3 /* SnapTrackServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTrackServerTests.m; sourceTree = "<group>"; };
+		B18572E017CFBB5000EFB1A3 /* SnapTrackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapTrackService.h; sourceTree = "<group>"; };
+		B18572E117CFBB5000EFB1A3 /* SnapTrackService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapTrackService.m; sourceTree = "<group>"; };
+		B18572E317CFBBC600EFB1A3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B18572E417CFBBC600EFB1A3 /* CoreBluetooth.framework in Frameworks */,
 				B18572A317CFBB2700EFB1A3 /* UIKit.framework in Frameworks */,
 				B18572A517CFBB2700EFB1A3 /* Foundation.framework in Frameworks */,
 				B18572A717CFBB2700EFB1A3 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +95,7 @@
 		B185729617CFBB2700EFB1A3 = {
 			isa = PBXGroup;
 			children = (
+				B18572E317CFBBC600EFB1A3 /* CoreBluetooth.framework */,
 				B18572A817CFBB2700EFB1A3 /* SnapTrackServer */,
 				B18572CF17CFBB2700EFB1A3 /* SnapTrackServerTests */,
 				B18572A117CFBB2700EFB1A3 /* Frameworks */,
@@ -126,6 +133,8 @@
 				B18572C017CFBB2700EFB1A3 /* ViewController.h */,
 				B18572C117CFBB2700EFB1A3 /* ViewController.m */,
 				B18572A917CFBB2700EFB1A3 /* Supporting Files */,
+				B18572E017CFBB5000EFB1A3 /* SnapTrackService.h */,
+				B18572E117CFBB5000EFB1A3 /* SnapTrackService.m */,
 			);
 			path = SnapTrackServer;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				B18572AF17CFBB2700EFB1A3 /* main.m in Sources */,
 				B18572B317CFBB2700EFB1A3 /* AppDelegate.m in Sources */,
 				B18572C217CFBB2700EFB1A3 /* ViewController.m in Sources */,
+				B18572E217CFBB5000EFB1A3 /* SnapTrackService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
