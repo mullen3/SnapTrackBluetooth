@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SnapTrackService.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SnapTrackServiceProtocol>
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (retain, nonatomic) IBOutlet UIAlertView *alertView;
+- (IBAction)setName:(id)sender;
+
+
 
 @end

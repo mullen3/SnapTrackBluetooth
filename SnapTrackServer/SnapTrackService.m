@@ -45,10 +45,28 @@
             [self advertise];
             break;
         case CBPeripheralManagerStatePoweredOff:
+            // not necessary iOS handles this for us.
+            // [self.delegate showAlertView];
+            [self setupService];
+            [self advertise];
             NSLog(@"Powered off");
             
         default:
             break;
+    }
+}
+
+- (void) setUserName:(NSString *)name
+{
+    NSLog(@"Setting name");
+    if (name) {
+        NSLog(@"Name is not null");
+        _userName = name;
+        // will this really be updated?
+        if (snapTrackNameCharacteristic){
+            NSLog(@"Setting characteristic value");
+            snapTrackNameCharacteristic.value = [_userName dataUsingEncoding:NSUTF8StringEncoding];
+        }
     }
 }
 
@@ -59,14 +77,14 @@
     
     cbuuidName = [CBUUID UUIDWithString:CHARACTERISTIC_NAME_UUID_STRING];
     
-    NSString *name = @"Dirk Diggler";
-    NSData *data = [name dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *string = @"Foo Bar";
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     
     snapTrackNameCharacteristic = [[CBMutableCharacteristic alloc]
                                    initWithType:cbuuidName
                                    properties:CBCharacteristicPropertyRead
                                    value:data
-                                   permissions:0];
+                                   permissions:CBAttributePermissionsReadable];
     
     snapTrackService = [[CBMutableService alloc] initWithType:cbuuidService primary:YES];
     
@@ -74,6 +92,7 @@
     
     [manager addService:snapTrackService];
 }
+
 
 - (void)advertise
 {

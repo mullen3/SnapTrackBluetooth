@@ -9,7 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface SnapTrackService : NSObject <CBPeripheralManagerDelegate>
+@protocol SnapTrackServiceProtocol <NSObject>
 
+- (void)showAlertView;
+
+@end
+
+
+@interface SnapTrackService : NSObject <CBPeripheralManagerDelegate> {
+
+    
+}
+
+@property (nonatomic, assign) id <SnapTrackServiceProtocol> delegate;
+@property (copy, nonatomic) NSString *userName;
 
 @end
