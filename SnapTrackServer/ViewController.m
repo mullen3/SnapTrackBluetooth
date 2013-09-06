@@ -44,8 +44,7 @@
 }
 
 - (IBAction)setName:(id)sender {
-    [_snapTrackService setUserName: self.textField.text];
-    
+    [_snapTrackService setName: self.textField.text];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {

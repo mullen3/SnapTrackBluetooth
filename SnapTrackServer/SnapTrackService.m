@@ -9,7 +9,8 @@
 #import "SnapTrackService.h"
 
 #define CHARACTERISTIC_NAME_UUID_STRING @"C54C3B19-64AC-423A-8282-09BA48CDB28C"
-#define SNAPTRACK_SERVICE_UUID_STRING @"7D1201BE-C06C-424B-862E-A2B4006BE326"
+#define SNAPTRACK_SERVICE_UUID_STRING @"7D12"
+#define USER_DEFAULTS_NAME_KEY @"name"
 
 @interface SnapTrackService() <CBPeripheralManagerDelegate>
 {
@@ -18,6 +19,8 @@
     CBMutableCharacteristic *snapTrackNameCharacteristic;
     CBUUID *cbuuidService;
     CBUUID *cbuuidName;
+    NSUserDefaults *prefs;
+    NSString *_name;
 }
 
 @end
@@ -30,6 +33,8 @@
     
     if (self) {
         manager = [[CBPeripheralManager alloc]initWithDelegate:self queue:nil];
+        // this should never be called twice?
+        prefs = [NSUserDefaults standardUserDefaults];
     }
     
     return self;
@@ -50,22 +55,61 @@
             [self setupService];
             [self advertise];
             NSLog(@"Powered off");
-            
+            break;
+        case CBPeripheralManagerStateUnsupported:
+            NSLog(@"Unsupported State");
+            break;
         default:
+            NSLog(@"state was updated in unhandled case");
             break;
     }
 }
 
-- (void) setUserName:(NSString *)name
+- (void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveReadRequest:(CBATTRequest *)request {
+    NSLog(@"Do we ever get here when the characteristic is read? %@", snapTrackNameCharacteristic.value);
+    request.value = [snapTrackNameCharacteristic.value subdataWithRange:NSMakeRange(request.offset, snapTrackNameCharacteristic.value.length - request.offset)];
+    [manager respondToRequest:request withResult:CBATTErrorSuccess];
+}
+
+
+
+- (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error
+{
+    NSLog(@"Peripheral Manager did start advertising");
+}
+
+- (NSString *) name
+{
+    // if name hasn't been intialized get it from user defaults
+    if (!_name && prefs) {
+        _name = [[NSString alloc] initWithString:[prefs stringForKey:USER_DEFAULTS_NAME_KEY]];
+        NSLog(@"intializing name from prefs file: %@", _name);
+    }
+    NSLog(@"get to name: name is %@", _name);
+    return _name;
+}
+
+- (void) setName:(NSString *)name
 {
     NSLog(@"Setting name");
     if (name) {
-        NSLog(@"Name is not null");
-        _userName = name;
-        // will this really be updated?
-        if (snapTrackNameCharacteristic){
-            NSLog(@"Setting characteristic value");
-            snapTrackNameCharacteristic.value = [_userName dataUsingEncoding:NSUTF8StringEncoding];
+        _name = name;
+        NSLog(@"Name is: %@", _name);
+        // if user preferences are loaded and the value hasn't been set
+        if (prefs)
+        {
+            // idk if this is slow, but going to update anyways
+            [prefs setValue:_name forKey:USER_DEFAULTS_NAME_KEY];
+            NSLog(@"Name is: %@", [prefs stringForKey:USER_DEFAULTS_NAME_KEY]);
+            // will this really be updated?
+            if (snapTrackNameCharacteristic){
+                snapTrackNameCharacteristic.value = [_name dataUsingEncoding:NSUTF8StringEncoding];
+                [manager stopAdvertising];
+                [self advertise];
+                NSLog(@"Setting characteristic value %@", [[NSString alloc]initWithData:snapTrackNameCharacteristic.value encoding: NSUTF8StringEncoding]);
+                NSLog(@"Does the service's characteristic value change? %@", [[NSString alloc]initWithData:((CBMutableCharacteristic *) snapTrackService.characteristics[0]).value encoding: NSUTF8StringEncoding]);
+            }
+
         }
     }
 }
@@ -77,8 +121,7 @@
     
     cbuuidName = [CBUUID UUIDWithString:CHARACTERISTIC_NAME_UUID_STRING];
     
-    NSString *string = @"Foo Bar";
-    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [self.name dataUsingEncoding:NSUTF8StringEncoding];
     
     snapTrackNameCharacteristic = [[CBMutableCharacteristic alloc]
                                    initWithType:cbuuidName
@@ -91,6 +134,7 @@
     snapTrackService.characteristics = [NSArray arrayWithObject:snapTrackNameCharacteristic];
     
     [manager addService:snapTrackService];
+    NSLog(@"Characteristic's value is: %@", snapTrackService.characteristics[0]);
 }
 
 

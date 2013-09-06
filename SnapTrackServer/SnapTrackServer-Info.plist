@@ -26,6 +26,10 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-peripheral</string>
+	</array>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>MainStoryboard_iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -22,6 +22,6 @@
 }
 
 @property (nonatomic, assign) id <SnapTrackServiceProtocol> delegate;
-@property (copy, nonatomic) NSString *userName;
+@property (copy, nonatomic) NSString *name;
 
 @end
