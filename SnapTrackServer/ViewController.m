@@ -45,6 +45,7 @@
 
 - (IBAction)setName:(id)sender {
     [_snapTrackService setName: self.textField.text];
+    [self.textField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
